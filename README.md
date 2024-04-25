@@ -1,3 +1,12 @@
+# Zero Networks Break Glass File Sync
+
+This script is aimed at assisting organizations that wish to have a dedicated server from which to execute a breakglass procedure from. The breakglass procedure requires a certain file (segmentedAssets.json) that is only presented and updated on the segment server(s). So, in order to have a server up-to-date and ready to go in the event breakglass is needed, you have to ensure the server has the latest breakglass files needed. 
+
+This script, when ran, will copy the contents of the BreakGlass directory on the Zero Networks Segment Server, to another destination server of your choosing. Running this script as a scheduled job will ensure the breakglass server has a (relatively) up to date version of the required files. 
+## Authors
+
+- Thomas Obarowski - [GitHub](https://www.github.com/tjobarow) - [LinkedIn](https://www.linkedin.com/in/tjobarow/)
+
 
 ## Usage/Examples
 
@@ -71,3 +80,9 @@ then reference them within the main function call of sync_breakglass_directory.p
 ```powershell
 Sync-BreakGlassDirectory -Username $ENV:username -Password $ENV:password -BreakGlassServer $ENV:breakglass_server -SegmentServer $ENV:segment_server -RemoteDirectory $ENV:remote_directory
 ```
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
+
+
+
